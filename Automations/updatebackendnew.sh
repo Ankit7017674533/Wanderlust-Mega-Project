@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Set the Instance ID and path to the .env file
-INSTANCE_ID=""
+current_url="192.168.29.151"
 
 # Retrieve the public IP address of the specified EC2 instance
-ipv4_address=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID --query 'Reservations[0].Instances[0].PublicIpAddress' --output text)
+ipv4_address=$(aws ec2 describe-instances --current_url $current_url --query 'Reservations[0].Instances[0].PublicIpAddress' --output text)
 
 # Path to the .env file
 file_to_find="../backend/.env.docker"

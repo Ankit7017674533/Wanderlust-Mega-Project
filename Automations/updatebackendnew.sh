@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the Instance ID and path to the .env file
-current_url="192.168.29.151"
+current_url="192.168.01.2"
 
 # Retrieve the public IP address of the specified EC2 instance
 ipv4_address=$(aws ec2 describe-instances --current_url $current_url --query 'Reservations[0].Instances[0].PublicIpAddress' --output text)

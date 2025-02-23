@@ -6,7 +6,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: ""
+  storageClassName: manual  # Must match PV storageClassName
   resources:
     requests:
       storage: 5Gi
